@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        @page{ size: auto; margin: 0mm;}
+        body{
+            margin: 0;
+            font-family: 'Brush Script MT';
+        }
+        div,img{
+            height: 21.8cm;
+            width: 28.3cm;
+            position: relative;
+        }
+        .name{
+            top: 8cm;
+            position: absolute;
+            right: 14cm;
+            font-size: 50px;
+            transform: translate(50%,50%);
+
+        }
+    </style>
+</head>
+<body id="body">
+    
+</body>
+<script>
+    const names = [
+        {name:"Emmanuel David Ikko"},
+  { name: "Kephas Israel" },
+  { name: "Paul Isaac Lawoon" },
+  { name: "Jared Mapida Alhamdu" },
+  { name: "Alan Alpha Apoloz" },
+  { name: "Yal Yakubu Alhamdu" },
+  { name: "Arren Dylann Ishaku" },
+  { name: "Jonathan Wesley" },
+  { name: "Adama Abdulkarim Adamu" },
+  { name: "Aeanna Gaius" },
+  { name: "Helen Ansolo Ishaya" },
+  { name: "Jeremiah Hassan" },
+  { name: "Shalom Salem Yakubu" },
+  { name: "Dorcas Yila Dabo" },
+  { name: "Lizkebe Hope Lawrence" },
+  { name: "Juliet Thiranus" },
+  { name: "Grace Biyathan Sam" },
+  { name: "Adami Ayuba" },
+  { name: "Suhailu Sam Sabo" },
+  { name: "Sani Mubarak" },
+  { name: "Aliyu Zakari Musa" },
+  { name: "Bridget Benjamin" },
+  { name: "Barsisa Barnabas" },
+  { name: "Patience Jechonia" },
+  { name: "Abdulladirf Mu'azu Sabo" },
+  { name: "Umar Yunusa Galadima" },
+  { name: "Adamu Abdulkarim" },
+  { name: "Ibrahim Abdullahi" },
+  { name: "Shuibu Yahaya Kallamu" },
+  { name: "Usman Mohammad Sani" },
+  { name: "Shamsudeen Yaya Tatlye" },
+  { name: "Jafar Umar Maigari" },
+  { name: "Omega Sylvanus" },
+  { name: "Hussain Sa'ad Muhammad" },
+  { name: "Abdulkadu Abu-Sufyan" },
+  { name: "Favour A. Gambo" },
+  { name: "Ibzan Ponon" },
+  { name: "Maryam Usman Saleh" },
+  { name: "Abba Abacha" },
+  { name: "Firdausi Hamza Umar" },
+  { name: "Yakuba Umar Sarki" },
+  { name: "SolomonMamman" },
+  { name: "Mustapha Lawah Umar" },
+  { name: "Gabriel Bitrus" },
+  { name: "Elijah James" },
+  { name: "Thomas Celestine" },
+  { name: "Zaphania Shedrach" },
+  { name: "Lina Epson Pensur" },
+  { name: "Airo Japhet" },
+  { name: "Silas Saleh Bangam" },
+  { name: "Michael Micah" },
+  { name: "Abbas Abdullahi" },
+  { name: "Faith Ishaya" },
+  { name: "Abdulwahab Isah" },
+  { name: "Solomi Abila" },
+  { name: "Muhammad Saifullahi Ibrahim" },
+  { name: "Kulimima Battah Ndirpaya" },
+  { name: "Ahmad D. Ahmad" },
+  { name: "Ruttu John Barau" },
+  { name: "Halima Hanan Yahuza" },
+  { name: "Tabitha Philip Usaman" },
+  { name: "Daniel Cilatus" },
+  { name: "Khalid Tafir" },
+  { name: "Saliasi Muhammad Manga" },
+  { name: "Stepen Ahinaduku" },
+  { name: "Adamu Usaman" },
+  { name: "Khuzaifa Mas' ud" },
+  { name: "Uris Mohammad Madaki" },
+  { name: "Dorrcas Yila dabbo" },
+  { name: "Hmmad Nasir Yahaya" },
+  { name: "Abubakar Haruna Akali" },
+  { name: "Abubakar Muhammad Kabir" },
+  { name: "Amos Jonathan" },
+  { name: "Umar Ali" },
+  { name: "Galadima Umar Galadima" },
+  { name: "Muhammad Salisu" },
+  { name: "Alex Paul Maiana" },
+  { name: "Emmanuel Hyellamada" },
+  { name: "Christy Buba" },
+  { name: "Victor Raphel" },
+  { name: "Janet Gideon" },
+  { name: "Ruvester Yila" },
+  { name: "Florence Ibrahim" },
+  { name: "Aisha Aliyu Ibrahim" },
+  { name: "Fidouci Hamza Umaru" },
+  { name: "Serah Lilos" },
+  { name: "Faith Ishaya John" },
+  { name: "Saratu Bage Foto" },
+  { name: "Saraya Elkana Eros" },
+  { name: "Mohammed Khadija Jingi" },
+  { name: "Temna Adama" },
+  { name: "Derah Lilos" },
+  { name: "Marya Ayuba" },
+  { name: "Doris Daniel" },
+  { name: "Yunusa Umar Galadima" },
+  { name: "Kaima Peace Gambo" },
+  { name: "Kyenpya Isaac Daspan" },
+  { name: "Magnificient Yusuf" },
+  { name: "Doris Daniel Audu" },
+  { name: "Tumun Nandak Aown" },
+  { name: "Adamu Abdulkarim Adamu" },
+  { name: "Sheba Ayuba" },
+  { name: "Precious John" },
+  { name: "Precious John Dangombe" },
+  { name: "Rahab Legal" },
+  { name: "Andrew Sunday" },
+  { name: "Hassan Saad Muhammad" },
+  { name: "Muhammed Usman" },
+  { name: "Anko Edna Ebal" },
+  { name: "Berachah Musa Alkali" },
+  { name: "Precious Barbuwa Kalla" },
+  { name: "Doris Daniel Audu" },
+  { name: "Stepheny Ali Daniel" },
+  { name: "Iliya Christy Juraidu" },
+  { name: "Keturah Zakari" },
+  { name: "Fatima Umar" },
+  { name: "Jamos Danbaba Jago" },
+  { name: "Kefas Ambi Legito" },
+  { name: "Isaac Emmanuel Bamgbose" },
+  { name: "Kalika Dorawa" },
+  { name: "Nao'mi Hussaini Helan" },
+  { name: "Prince Nebul" },
+  { name: "Victory Kaweng Kim" }
+  ]
+    let post = document.getElementById('body')
+
+    names.forEach(x=>{
+        post.innerHTML += `
+        <div id="main">
+        <img src="cer.jpg" alt="">
+    <span class="name">${x.name}</span>
+</div>
+      `
+    })
+    console.log(names.length);
+</script>
+</html>
